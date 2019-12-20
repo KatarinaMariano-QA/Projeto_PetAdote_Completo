@@ -1,0 +1,73 @@
+.titulo{
+    font-size: 28px;
+}
+.container{
+    position: absolute;
+    width: 100%;
+}
+.textLabel{
+    font-size: 18px;
+}
+.textDetail{
+    font-size: 18px;
+    color: rgb(150, 22, 22);
+}
+.tamanhoImgs{
+    width: 250px !important;
+    height:250px !important;
+}
+.textFinal{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+/* xs*/
+@media (max-width: 576px) {
+    .tamanhoImgs{
+        width: 150px !important;
+        height:150px !important;
+    }
+
+    .textFinal{
+        font-size: 13px;
+        font-weight: bold;
+        color: black;
+    }
+}
+
+/* sm*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .tamanhoImgs{
+        width: 180px !important;
+        height:180px !important;
+    }
+
+    .textFinal{
+        font-size: 15px;
+        font-weight: bold;
+        color: black;
+    }
+}
+
+/* md*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .tamanhoImgs{
+        width: 200px !important;
+        height:200px !important;
+    }
+    .textFinal{
+        font-size: 15px;
+        font-weight: bold;
+        color: black;
+    }
+    
+}
+
+/* lg*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .tamanhoImgs{
+        width: 250px !important;
+        height:250px !important;
+    }
+}

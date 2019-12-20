@@ -1,0 +1,81 @@
+﻿    @using Microsoft.AspNet.Identity;
+    @{
+        ViewBag.Title = "_NavUser";
+    }
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+        <script src="~/Scripts/jquery.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="~/Content/css/navbarUsuario.css" />
+        <link href="~/Images/logo.png" rel="icon" type="image/x-icon" />
+        <script src="~/Scripts/scriptMenu.js"></script>
+    </head>
+
+    <body>
+        <!-- NAVBAR HORIZONTAL-->
+        <nav class="navbar navbar-fixed-top navbar-default corNav" id="#menuLayout">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                        <span class="icon-bar corIconBar"></span>
+                        <span class="icon-bar corIconBar"></span>
+                        <span class="icon-bar corIconBar"></span>
+                    </button>
+                    <img class="iconNav" src="~/Images/logo.png" width="50">
+                    <span class="nav-item-sidebar"><b>PetAdote</b></span>
+
+                </div>
+                <!-- MENU HORIZONTAL INVISÃƒÂVEL-->
+                <div id="menu" class="collapse navbar-collapse ">
+                    <ul class="nav navbar-nav corNav hidden-lg hidden-md hidden-sm">
+                        <li class="item-sidebar">
+                            <center>
+                                <h4>
+                                    @Html.ActionLink("Olá " + User.Identity.GetUserName() + "!", "null", "null", routeValues: null, htmlAttributes: new { @class = "item-sidebar" })
+                                </h4>
+                            </center>
+                        </li>
+                        <hr>
+                        <li><a href="@Url.Action("IndexUser", "User")" class="item-sidebar itemMenu2 menuPaginaInicial"><span class="glyphicon glyphicon-home"></span>  Pagina Inicial</a></li>
+                        <li><a href="@Url.Action("EditUser", "Manager", new { id = User.Identity.GetUserId() })" class="item-sidebar itemMenu2 menuEditarDados"><span class="glyphicon glyphicon-cog"></span>  Editar Dados</a></li>
+                        <li><a href="@Url.Action("AddPet", "Pet")" class="item-sidebar itemMenu2"><span class="glyphicon glyphicon-plus-sign menuIncluirPet"></span>  Incluir na Lista</a></li>
+                        <li><a href="@Url.Action("ListMyPet", "Pet")" class="item-sidebar itemMenu2 menuMeusPets"><span class="glyphicon glyphicon-bookmark"></span>  Meus Pets</a></li>
+                        <li><a href="@Url.Action("Logout", "Account")" class="item-sidebar itemMenu2 menuSair"><span class="glyphicon glyphicon-off"></span>  Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- MENU VERTICAL -->
+        <nav class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-sm-3 preenchimento navFixa hidden-xs">
+                    <ul class="nav nav-sidebar corNav text-left">
+                        <li class="item-sidebar nomeUsuario">
+                            <center>
+                                @Html.ActionLink("Olá " + User.Identity.GetUserName() + "!", "null", "null", routeValues: null, htmlAttributes: new { @class = "item-sidebar" })
+                            </center>
+                        </li>
+                        <hr>
+                        <li><a href="@Url.Action("IndexUser", "User")" class="item-sidebar itemMenuInicio menuPaginaInicial"><span class="glyphicon glyphicon-home"></span>  Pagina Inicial</a></li>
+                        <li><a href="@Url.Action("EditUser", "Manager", new { id = User.Identity.GetUserId() })" class="item-sidebar itemMenu menuEditarDados"><span class="glyphicon glyphicon-cog"></span>  Editar Dados</a></li>
+                        <li><a href="@Url.Action("AddPet", "Pet")" class="item-sidebar itemMenu menuIncluirPet"><span class="glyphicon glyphicon-plus-sign"></span>  Incluir na Lista</a></li>
+                        <li><a href="@Url.Action("ListMyPet", "Pet")" class="item-sidebar itemMenu menuMeusPets"><span class="glyphicon glyphicon-bookmark"></span>  Meus Pets</a></li>
+                        <li><a href="@Url.Action("Logout", "Account")" class="item-sidebar itemMenu menuSair"><span class="glyphicon glyphicon-off"></span>  Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <script src="~/Scripts/scriptMenu.js"></script>
+        @RenderBody()
+    </body>
+</html>

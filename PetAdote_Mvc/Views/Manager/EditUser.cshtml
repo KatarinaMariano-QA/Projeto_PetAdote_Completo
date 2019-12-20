@@ -1,0 +1,108 @@
+﻿@model PetAdote_Mvc.Models.ManagerViewModels.EditUserViewModel
+@using Microsoft.AspNet.Identity;
+
+@{
+    ViewBag.Title = "EDITAR DADOS | Projeto PetAdote";
+    Layout = "~/Views/Shared/_NavUser.cshtml";
+}
+
+<title>EDITAR DADOS | Projeto PetAdote</title>
+<link rel="stylesheet" type="text/css" href="~/Content/css/editarUsuario.css" />
+<script src="@Url.Content("~/Scripts/jquery-3.3.1.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.mask.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.complexify.min.js")"></script>
+<script src="@Url.Content("~/Scripts/bootstrap-validator-0.4.5.min.js")"></script>
+<script src="@Url.Content("~/Scripts/validPhone.js")"></script>
+<!-- SESSAO  EDITAR DADOS DO USUARIO-->
+@using (Html.BeginForm())
+{
+<section id="formularioEditarSenha" class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12"><br><br><br><br></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="col-lg-2 col-md-3 col-sm-3"></div>
+            <center>
+                <span class="titulo">Editar Dados do Usuário:</span>
+            </center>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-3"> </div>
+        <div class="col-lg-10 col-md-9 col-sm-9 col-xs-12">
+            @Html.AntiForgeryToken()
+            <center>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger alert alert-danger" })
+            </center>
+        </div>
+    </div>
+ 
+    @Html.HiddenFor(model => model.Id)
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-4 col-md-4"></div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6"></div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                <div class="avisoObrigatorio">Os campos com asterisco (*) são obrigatórios</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4"></div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+            <div class="row container">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> <br><br> </div>
+                <div class="col-lg-8 col-md-8 col-sm-10 col-xs-12">
+                    <div class="form-group row">
+                        <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">Nome:* </label>
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @required = "required", maxlength = 50} })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">E-mail:* </label>
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @required = "required", maxlength = 100,} })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">ONG:* </label>
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            @Html.EditorFor(model => model.ONG, new { htmlAttributes = new { @class = "form-control", @required = "required", maxlength = 100 } })
+                            @Html.ValidationMessageFor(model => model.ONG, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">Telefone: </label>
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            @Html.EditorFor(model => model.Telephone, new { htmlAttributes = new { @class = "form-control phone-ddd-mask", @required = "required", maxlength = 14 } })
+                            @Html.ValidationMessageFor(model => model.Telephone, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-lg-3 col-md-4 col-sm-3 col-xs-4 col-form-label">Alterar Senha:* </label>
+                        <div class="col-lg-9 col-md-8 col-sm-9 col-xs-8 ">
+                            <a href="@Url.Action("EditPassword", "Manager", new { id = User.Identity.GetUserId() })">clique aqui para editar a sua senha</a>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <center>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <input type="submit" class="btn btn-success btnSubmit" value="Salvar Alterações" />
+                                <input type="button" class="btn btn-danger btnCancel" value="Cancelar" onclick="location.href='@Url.Action("IndexUser", "User")'" />
+                            </div>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+}

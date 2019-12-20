@@ -1,0 +1,44 @@
+.container{
+    width: 100%;
+    padding: 0%;
+}
+.corNav{
+    background-color:#f44336!important;
+}
+.item-sidebar {
+    color: white !important;
+}
+.bannerInicial {
+    background: url('/Images/banner.jpg') no-repeat center center fixed;
+    background-position: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ .secaoSobre{
+    background-color: #F2F2F2;
+  }
+
+  .banner2{
+    background: url('/Images/banner3.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: center;
+    height:80vh;
+    
+  }
+  .banner3{
+    background: url('/Images/banner4.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: center;
+    height: 80vh;
+    
+  }

@@ -1,0 +1,94 @@
+﻿@model IEnumerable<PetAdote_Dominio.Entities.Pet>
+
+@{
+
+    ViewBag.Title = "MEUS PETS | Projeto PetAdote";
+    Layout = "~/Views/Shared/_NavUser.cshtml";
+}
+
+<title>MEUS PETS | Projeto PetAdote</title>
+<link rel="stylesheet" type="text/css" href="~/Content/css/indexUsuario.css" />
+<link rel="stylesheet" type="text/css" href="~/Content/css/meusPets.css" />
+<link rel="stylesheet" type="text/css" href="~/Content/css/listaVazia.css" />
+
+<!-- SESSAO TÍTULO DA LISTA DE ANIAMIS -->
+<section id="listaMeusPets" class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12"><br><br><br><br></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="col-lg-2 col-md-3 col-sm-3"></div>
+            <center>
+                <span class="titulo">Meus Pets:</span>
+            </center>
+        </div>
+    </div>
+</section>
+
+@if (Model.Count() == 0)
+{
+    <!-- SESSAO LISTA VAZIA -->
+    <section class="container listaVazia">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3"></div>
+            <div class="col-lg-8 col-md-9 col-sm-9">
+                <div class="row container">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> <br><br> </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 aviso">
+                        <center>
+                            <h4>Lista Vazia!</h4>
+                            <h4>Você ainda não adicionou nenhum Pet à lista de adoção.</h4>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+}
+else { 
+
+<!-- SESSAO LISTA DE ANIAMIS -->
+<section class="container lista">
+    <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-3"></div>
+        <div class="col-lg-10 col-md-9 col-sm-9 ">
+
+            <div class="row container">
+                <div class="col-lg-12 col-md-12 col-sm-12"> <br><br> </div>
+
+                @foreach (var item in Model)
+                {
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="thumbnail ">
+                            @if (!string.IsNullOrEmpty(item.PhotoAddress))
+                            {
+                                <img class="tamanhoImgs" src="@Url.Content(item.PhotoAddress)" alt="Image" />
+                            }
+                            <div class="caption">
+                                <h4>Nome: @Html.DisplayFor(modelItem => item.Name)</h4>
+                                <h4>Raça: @Html.DisplayFor(modelItem => item.Breed)</h4>
+                                <h4>Idade: @Html.DisplayFor(modelItem => item.Age) anos</h4>
+
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-6 col-sm-5 col-xs-9"> </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-7 col-xs-3">
+                                        <button class="btn botao" onclick="location.href='@Url.Action("EditPet", "Pet", new { id = item.Id})'"><span class="glyphicon glyphicon-edit btnEdit"></span></button>
+                                        <button class="btn botao" onclick="location.href='@Url.Action("EditStatus", "Pet", new { id = item.Id})'"><span class="glyphicon glyphicon-cog btnStatus"></span></button>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </div>
+    </div>
+</section>
+}

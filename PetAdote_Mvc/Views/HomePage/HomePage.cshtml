@@ -1,0 +1,200 @@
+﻿@{
+    ViewBag.Title = "PAGINA INICIAL | Projeto PetAdote";
+    Layout = "~/Views/Shared/_NavHomePage.cshtml";
+}
+
+<title>PAGINA INICIAL | Projeto PetAdote</title>
+<link href="~/Content/css/animate.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="~/Content/css/homePage.css" />
+<script src="~/Scripts/scriptHome.js"></script>
+
+
+    <!-- SEÇÃO PRINCIPAL -->
+    <section class="bannerInicial">
+        <article class="text-center tituloPage">
+            <hr>
+            <div class="animated cair"><span class="textBig"><b>Bem-vindo ao Projeto PetAdote</b></span></div>
+            <h2 class="animated subir">Felicidade não tem preço, adote!</h2>
+            <hr>
+            <button class=" btn-findBlue animated right" onclick="location.href='@Url.Action("PetsList", "HomePage")'"><b><h4>&emsp;Encontre seu Pet&emsp;</h4></b></button>
+        </article>
+    </section>
+
+    <!-- SEÇÃO PASSOS PARA ADOTAR -->
+    <section class="secoesPassosParaAdotar">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 text-center animated Zoom">
+                    <h1>Passos para adotar:</h1>
+                    <br>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-2 col-md-hidden col-sm-hidden ">
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 animated Zoom">
+                    <h1 class="glyphicon glyphicon-thumbs-up "></h1>
+                    <h4>Ter a idade exigida</h4>
+                    <h5>Para adotar um Pet é necessário que o interessado(a) tenha mais de 21 anos de idade.</h5>
+                </div>
+                <div class="col-lg-1  col-md-hidden col-sm-hidden">
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 animated Zoom">
+                    <h1 class="glyphicon glyphicon-list "></h1>
+                    <h4>Apresentação de documentos</h4>
+                    <h5>Na hora da adoção serão exigidos alguns documentos como RG, CPF e comprovante de residência.</h5>
+                </div>
+                <div class="col-lg-1  col-md-hidden col-sm-hidden">
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 animated Zoom">
+                    <h1 class="glyphicon glyphicon-pencil "></h1>
+                    <h4>Termo de compromisso</h4>
+                    <h5>É preciso também, assinatura de um termo para comprovar o seu compromisso com a adoção.</h5>
+                </div>
+                <div class="col-lg-2 col-md-hidden col-sm-hidden"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO PORQUE ADOTAR -->
+    <section class="secaoPorqueAdotar">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-lg-2 col-md-2 "></div>
+                <div class="col-lg-4 col-md-4 animated left delay">
+                    <h1 class="text-center tituloSecaoPorqueAdotar">Por que Adotar?</h1>
+                    <br>
+                    <div class="textoSecaoPorqueAdotar">
+                        <p class="text-justify">
+                            Já reparou a quantidade de animais que vivem nas ruas da sua cidade?
+                            Eles sentem frio, dor, medo e fome, e muitos chegam à velhice conhecendo apenas a face cruel dos humanos.
+                            Com a adoção você retira um animal do abrigo e dá a chance de outro ser resgatado e cuidado para futuramente
+                            ir para outra família. Nos abrigos você encontra várias opções como filhotes, adultos, de raça ou SRD's (Sem Raça Definida).
+                        </p>
+                        <p class="text-justify">
+
+                        </p>
+                        <p class="text-justify">
+                            Adotar é um ato de amor, ao fazê-lo você está dando a esse pet a chance de ter uma família,
+                            de ser cuidado e de poder recompensar todo o carinho que está recebendo.
+                            Lembre-se, os animais sempre devolvem amor com amor, por isso quando se adota e os trata como eles merecem não haverá
+                            nada que eles não façam para encher de amor e atenção os donos, em sinal de agradecimento por tudo que recebem.
+                        </p>
+                    </div>
+                </div>
+                <div class="hidden-lg hidden-md col-sm-3 col-xs-3"></div>
+                <div class="col-lg-4 col-md-4 col-xs-6 animated right text-center">
+                    <div class="hoverzoom imageDiv">
+                        <img class=" img-responsive img-rounded" src="~/Images/women-dog.jpg">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2"></div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SEÇÃO SOBRE NÓS -->
+    <section class="secaoQuemSomos ">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 col-md-2 "></div>
+                <div class="col-lg-4 col-md-4 animated left text-center">
+                    <center>
+                        <img class=" img-responsive logoPetAdote" src="~/Images/logo.png">
+                    </center>
+                </div>
+                <div class="col-lg-4 col-md-4 animated right">
+                    <h1 class="text-center">Quem Somos</h1>
+                    <br>
+
+                    <p class="text-justify">
+                        O projeto <strong>PetAdote</strong> foi iniciado em 2019 como resultado da colaboração entre uma desenvolvedora independente
+                        e a ONG Faça a Sua Parte. Com o intuito de unir animais que estão à procura de um lar e você que está
+                        procurando um novo amigo. Aqui você tem a oportunidade de encontrar aquele pedacinho que falta em seu coração.
+                    </p>
+
+                </div>
+                <div class="hidden-lg hidden-md col-sm-4 col-xs-4"></div>
+                <div class="col-lg-2 col-md-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO MISSAO, VISÃO E VALORES-->
+    <section class="secaoValores">
+        <div class="container-fluid">
+            <div class="row text-center">
+
+                <div class="col-lg-2 col-md-hidden col-sm-hidden ">
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 animated Zoom ">
+                    <h1 class="glyphicon glyphicon glyphicon-ok-sign icons"></h1>
+                    <h4>Missão</h4>
+                    <h5>Proporporcionar que animais carentes possam ter um lar cheio de amor.</h5>
+                </div>
+                <div class="col-lg-1  col-md-hidden col-sm-hidden">
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 animated Zoom">
+                    <h1 class="glyphicon glyphicon glyphicon-hourglass icons"></h1>
+                    <h4>Visão</h4>
+                    <h5>Fazer a diferença na causa animal e contribuir com a diminuição dos pets que vivem em situação de abandono.</h5>
+                </div>
+                <div class="col-lg-1  col-md-hidden col-sm-hidden">
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 animated Zoom">
+                    <h1 class="glyphicon glyphicon glyphicon-star icons"></h1>
+                    <h4>Valores</h4>
+                    <h5>Temos empatia, tolerância e amor pelos animais como nossos principais valores.</h5>
+                </div>
+                <div class="col-lg-2 col-md-hidden col-sm-hidden">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO FINAL -->
+    <section class="secaoFinal">
+        <div class="container-fluid animated Zoom">
+            <div class="row ">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <h1><b>Encontre um amigo</b></h1>
+                    <h4 class="">Adote amor, adote um pet.</h4>
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <button class="btn-findOrange" onclick="location.href='@Url.Action("PetsList", "HomePage")'"><h5><b>&emsp;Encontre seu Pet&emsp;</b></h5></button>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO FOOTER -->
+    <footer class="corNav container-fluid item-sidebar ">
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <h4>
+                    Maltratar animais é crime ligue e denuncie
+                </h4>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <h5>
+                    © Copyright 2019. Feito com <span class="glyphicon glyphicon-heart"></span> By Katarina Mariano
+                </h5>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/Scripts/scriptHome.js"></script>
+
+
+

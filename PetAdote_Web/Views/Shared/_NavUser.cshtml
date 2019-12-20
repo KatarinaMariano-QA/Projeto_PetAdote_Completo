@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "_NavUser";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>INDEX | Projeto PetAdote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/navbarUsuario.css" />
+    <link href="~/Images/favicon.ico" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+    <!-- NAVBAR HORIZONTAL-->
+    <nav class="navbar navbar-fixed-top navbar-default corNav" id="#menuLayout">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                    <span class="icon-bar corIconBar"></span>
+                    <span class="icon-bar corIconBar"></span>
+                    <span class="icon-bar corIconBar"></span>
+                </button>
+                <span class="navbar-brand item-sidebar">PetAdote</span>
+            </div>
+            <!-- MENU HORIZONTAL INVISÃƒÂVEL-->
+            <div id="menu" class="collapse navbar-collapse ">
+                <ul class="nav navbar-nav corNav hidden-lg hidden-md hidden-sm">
+                    <li class="item-sidebar"><center><h4>Usuario</h4></center></li>
+                    <hr>
+                    <li><a href="IndexUsuario.html" class="item-sidebar itemMenu2"><span class="glyphicon glyphicon-home"></span>  Pagina Inicial</a></li>
+                    <li><a href="#" class="item-sidebar itemMenu2"><span class="glyphicon glyphicon-cog"></span>  Editar Dados</a></li>
+                    <li><a href="#" class="item-sidebar itemMenu2"><span class="glyphicon glyphicon-plus-sign"></span>  Incluir na Lista</a></li>
+                    <li><a href="#" class="item-sidebar itemMenu2"><span class="glyphicon glyphicon-heart"></span>  Parceiros</a></li>
+                    <li><a href="#" class="item-sidebar itemMenu2"><span class="glyphicon glyphicon-bookmark"></span>  Meus Pets</a></li>
+                    <li><a href="#" class="item-sidebar itemMenu2"><span class="glyphicon glyphicon-off"></span>  Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MENU VERTICAL -->
+    <nav class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-3 col-sm-3 preenchimento navFixa hidden-xs">
+                <ul class="nav nav-sidebar corNav text-left">
+                    <li class="item-sidebar nomeUsuario"><center>Usuario</center></li>
+                    <hr>
+                    <li><a href="IndexUsuario.html" class="item-sidebar itemMenuInicio"><span class="glyphicon glyphicon-home"></span>  Pagina Inicial</a></li>
+                    <li><a href="#" class="item-sidebar itemMenu"><span class="glyphicon glyphicon-cog"></span>  Editar Dados</a></li>
+                    <li><a href="#" class="item-sidebar itemMenu"><span class="glyphicon glyphicon-plus-sign"></span>  Incluir na Lista</a></li>
+                    <li><a href="#" class="item-sidebar itemMenu"><span class="glyphicon glyphicon-heart"></span>  Parceiros</a></li>
+                    <li><a href="#" class="item-sidebar itemMenu"><span class="glyphicon glyphicon-bookmark"></span>  Meus Pets</a></li>
+                    <li><a href="#" class="item-sidebar itemMenu"><span class="glyphicon glyphicon-off"></span>  Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+</body>
+</html> 

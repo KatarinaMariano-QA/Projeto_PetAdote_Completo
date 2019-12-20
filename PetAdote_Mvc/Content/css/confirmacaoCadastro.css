@@ -1,0 +1,28 @@
+.bannerInicial {
+    background: url('/Images/banner4.jpg') no-repeat center center fixed;
+    background-position: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: center;
+    height: 100vh;
+}
+#ConfirmaCadastro.container{
+    background-color: rgba(255, 255, 255, 0.774);
+    border-radius: 6px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.divConfirmaCadastro{
+    width: 100%;
+    height: 35.7em;
+}
+
+@media (max-width: 575.98px) {    
+    .divConfirmaCadastro{
+        width: 100%;
+        height: 34em;
+    }
+  
+}

@@ -1,0 +1,68 @@
+.titulo{
+    font-size: 28px;
+}
+.container{
+    position: absolute;
+    width: 100%;
+}
+.textLabel{
+    font-size: 18px;
+}
+.textDetail{
+    font-size: 16px;
+    color: rgb(150, 22, 22);
+}
+.tamanhoImgs{
+    width: 250px !important;
+    height:250px !important;
+}
+
+.btnCancel{
+    border-color: red;
+    font-weight: bold;  
+    margin-left: 10px; 
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.btnSalvar{
+    border-color: green;
+    font-weight: bold;
+    margin-right: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+/* xs*/
+@media (max-width: 576px) {
+    .tamanhoImgs{
+        width: 150px !important;
+        height:150px !important;
+    }
+}
+
+/* sm*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .tamanhoImgs{
+        width: 180px !important;
+        height:180px !important;
+    }
+   
+}
+
+/* md*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .tamanhoImgs{
+        width: 200px !important;
+        height:200px !important;
+    }
+    
+    
+}
+
+/* lg*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .tamanhoImgs{
+        width: 250px !important;
+        height:250px !important;
+    }
+}

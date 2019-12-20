@@ -1,0 +1,129 @@
+﻿@model PetAdote_Mvc.Models.PetViewModels.EditPetViewModel
+
+@{
+    ViewBag.Title = "EditPet";
+    Layout = "~/Views/Shared/_NavUser.cshtml";
+}
+
+<title>EDITAR PET | Projeto PetAdote</title>
+<link rel="stylesheet" type="text/css" href="~/Content/css/incluirPet.css" />
+@using (Html.BeginForm("EditPet", "Pet", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <!-- SESSAO  EDITAR DADOS DO PET-->
+    <section id="formularioEditarPet" class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12"><br><br><br><br></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="col-lg-2 col-md-3 col-sm-3"></div>
+                <center>
+                    <span class="titulo">Editar Dados do Pet:</span>
+
+                </center>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-4 col-md-4"></div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 "></div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    <div class="avisoObrigatorio">Os campos com asterisco (*) são obrigatórios</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3"></div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                <div class="row container">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">@Html.ValidationSummary(true, "", new { @class = "text-danger" }) <br></div>
+                    <div class="col-lg-4 col-md-8 col-sm-10 col-xs-12 titulo2">DADOS DO PET:</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3"></div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                <div class="row container">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> <br><br><br> <br></div>
+
+                    <div class="row container-fluid ">
+                        <div class="row form-group">
+                            <label class="">Nome:* </label>
+                            <div class="col-lg-4 col-md-5 col-sm-4">
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @required = "required", maxlength = 50 } })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
+                            <label class="">Idade:* </label>
+                            <div class="col-lg-4 col-md-5 col-sm-4">
+                                @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="">Tipo:* </label>
+                            <div class="col-lg-4 col-md-5 col-sm-4">
+                                @Html.DropDownList("TypeId", null, htmlAttributes: new { @class = "form-control", @required = "required" })
+                                @Html.ValidationMessageFor(model => model.TypeId, "", new { @class = "text-danger" })
+                            </div>
+                            <label class="">Cuidados:* </label>
+                            <div class="col-lg-4 col-md-5 col-sm-4">
+                                @Html.EditorFor(model => model.Cautions, new { htmlAttributes = new { @class = "form-control", @required = "required", maxlength = 100 } })
+                                @Html.ValidationMessageFor(model => model.Cautions, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="">Sexo:* </label>
+                            <div class="col-lg-4 col-md-5 col-sm-4">
+                                @Html.DropDownList("GenderId", null, htmlAttributes: new { @class = "form-control", @required = "required" })
+                                @Html.ValidationMessageFor(model => model.GenderId, "", new { @class = "text-danger" })
+                            </div>
+                            <label class="">Porte:* </label>
+                            <div class="col-lg-4 col-md-5 col-sm-4">
+                                @Html.DropDownList("SizeId", null, htmlAttributes: new { @class = "form-control", @required = "required" })
+                                @Html.ValidationMessageFor(model => model.SizeId, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="">Raça:* </label>
+                            <div class="col-lg-4 col-md-5 col-sm-4 ">
+                                @Html.EditorFor(model => model.Breed, new { htmlAttributes = new { @class = "form-control", @required = "required", maxlength = 50 } })
+                                @Html.ValidationMessageFor(model => model.Breed, "", new { @class = "text-danger" })
+                            </div>
+                            <label class="">Foto:* </label>
+                            <div class="col-lg-4 col-md-5 col-sm-4 ">
+                                @Html.TextBoxFor(model => model.Photo, new { Type = "file",@required = "required" })
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="">História:* </label>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                @Html.TextAreaFor(model => model.History, new { @class = "form-control inputHistory", @required = "required", maxlength = 250, @rows = "7", @cols = "50" })
+                                @Html.ValidationMessageFor(model => model.History, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <center>
+                                <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                                    <input type="submit" class="btn btn-success btnSalvar" value="Salvar" />
+                                    <input type="button" class="btn btn-danger btnCancel" value="Cancelar" onclick="location.href='@Url.Action("IndexUser", "User")'"/>
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+    </section>
+}

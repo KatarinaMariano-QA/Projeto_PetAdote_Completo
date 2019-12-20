@@ -1,0 +1,211 @@
+.container{
+    width: 100%;
+    padding: 0%;
+}
+.scrolle{
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.scroll {
+    color:white;
+}
+/* --------- CSS SEÇÃO PRINCIPAL --------- */
+.bannerInicial {
+    background: url('/Images/pegadas.jpeg') no-repeat center center fixed;
+    background-position: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+}
+.tituloPage{
+  color: white;
+}
+
+/* --------- CSS SEÇÃO LISTA DE PETS --------- */ 
+.secaoLista{
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.listaVazia {
+    background-color: #ee7920;
+    color: white;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+/* --------- CSS THUMBNAILS --------- */
+
+.tituloThumbnail{
+  margin: 0px;
+  background-color: #00468c !important;
+  color: white;
+}
+.thumbnail{
+  display:block;
+  padding:4px;
+  margin-bottom:20px;
+  line-height:1.42857143;
+  background-color:#fff;
+  border:2px dashed #ee7920;
+  border-radius:4px;
+}
+
+/* --------- CSS IMAGENS --------- */
+
+.img-opacity{
+  opacity:0.9;
+}
+.img-opacity:hover{
+  opacity:1;
+}
+.hoverzoom {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px !important;
+}
+.hoverzoom img{
+  width: 100%; 
+  -webkit-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+  -moz-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+  -ms-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+  -o-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+  transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+}
+.hoverzoom:hover img{
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+/* --------- CSS TEXTOS DO THUMBNAIL --------- */
+
+.textLabel{
+  font-size: 18px;
+  color: black;
+}
+.textDetail{
+  font-size: 18px;
+  color: black;
+}
+p{
+  margin: 2px;
+}
+
+/* --------- BOTÕES --------- */
+.btn-findOrange{
+  background-color: #ee7920;
+  color: white;
+  border: 2px solid #00468c;
+  border-radius: 25px;
+}
+.btn-findOrange:hover{
+  background-color: #df6c15;
+  color: white;
+  border: 2px solid #05396d;
+  border-radius: 25px;
+}
+
+/* --------- CSS SEÇÃO AVISO --------- */
+
+.secaoAviso{
+  background-color: #07374f;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+ }
+
+/* --------- CSS FOOTER --------- */
+
+footer{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+/* --------- MEDIA QUERYS --------- */
+
+@media (min-width: 1200px) {     
+  p{
+    font-size:2.0rem;
+  }
+  .img-lista, .img-detalhe{
+    width: 295px !important;
+    height: 197px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .img-lista{
+    width: 100% !important;
+    height: 197px !important;
+  }
+  .img-detalhe{
+    width: 295px !important;
+    height: 197px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .img-lista{
+    width: 100%!important;
+    height: 197px !important;
+  }
+  .img-detalhe{
+    width: 295px !important;
+    height: 197px !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+  .img-lista{
+    width: 100% !important;
+    height: 197px !important;
+  }
+  .img-detalhe{
+    width: 295px !important;
+    height: 197px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  p{
+    font-size:1.8rem;
+  }
+  .img-lista{
+    width: 100% !important;
+    height: 150px !important;
+  }
+  .img-detalhe{
+    width: 295px !important;
+    height: 197px !important;
+  }
+}
+
+
+/* --------- CSS MODAL --------- */
+
+.modal-header{
+  background-color: #00468c;
+  color: white;
+}
+.modal-content{
+  border:6px solid #ee7920;
+}
+.btn-fechar{
+  background-color: /*#00468c*/#ee7920;
+  color: white;
+  border: solid /*#ee7920*/ #00468c;
+}
+.btn-fechar:hover{
+  background-color: #df6c15;
+  color: white;
+  border:solid #05396d;
+}

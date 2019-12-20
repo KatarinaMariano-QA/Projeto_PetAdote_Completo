@@ -1,0 +1,184 @@
+﻿@model IEnumerable<PetAdote_Dominio.Entities.Pet>
+@{
+    /**/
+
+    ViewBag.Title = "LISTA DE PETS | Projeto PetAdote";
+    Layout = "~/Views/Shared/_NavHomePage.cshtml";
+}
+<title>LISTA DE PETS | Projeto PetAdote</title>
+<link href="~/Content/css/animate.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="~/Content/css/listaPets.css" />
+<script src="~/Scripts/scriptHome.js"></script>
+
+
+ <!-- SEÇÃO PRINCIPAL -->
+<section class="bannerInicial">
+    <article class="text-center tituloPage">
+        <hr>
+        <div class="animated cair"><span class="textBig"><b>Bem-vindo ao Projeto PetAdote</b></span></div>
+        <h2 class="animated subir">Felicidade não tem preço, adote!</h2>
+        <hr>
+        <div class="scroll">
+            <a href="#list" class="scroll"><h1 class="glyphicon glyphicon-chevron-down"></h1></a>
+        </div>
+
+    </article>
+</section>
+
+<!-- SEÇÃO LISTA DE PETS -->
+<section id="list" class="secaoLista">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1>Veja quem está esperando por você</h1>
+            <br><br>
+        </div>
+    </div>
+
+    @if (Model.Count() == 0)
+    {
+        <div class="row listaVazia">
+            <center>
+                <h3>Lista Vazia!</h3>
+                <h3>Ainda não temos Pets na Lista de Adoção.</h3>
+            </center>
+
+        </div>
+
+    }
+    else
+    {
+       
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-3 col-md-3 col-sm-6  col-xs-6">
+                        <div class="thumbnail">
+                            <div class="row tituloThumbnail">
+                                <div class="col-lg-12 text-center ">
+                                    <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+                                </div>
+                            </div>
+                            <div class="hoverzoom">
+                                @if (!string.IsNullOrEmpty(item.PhotoAddress))
+                                {
+                                <img class="img-opacity img-responsive img-lista" src="@Url.Content(item.PhotoAddress)" alt="Image" />
+                                }
+                            </div>
+                            <p>
+                                <span class="textLabel">Raça:</span>
+                                <span class="textDetail">@Html.DisplayFor(modelItem => item.Breed)</span>
+                            </p>
+                            <p>
+                                <span class="textLabel">Sexo:</span>
+                                <span class="textDetail">@Html.DisplayFor(modelItem => item.GenderName)</span>
+                            </p>
+                            <p>
+                                <span class="textLabel">Porte:</span>
+                                <span class="textDetail">@Html.DisplayFor(modelItem => item.SizeName)</span>
+                            </p>
+                            <br>
+                            <button class="btn btn-findOrange btn-block" data-toggle="modal" data-target="#ModalDetalhesPet"><h4><b>Saiba Mais</b></h4></button>
+                            <!-- INICIO MODAL -->
+                            <div class="modal fade" id="ModalDetalhesPet" tabindex="-1" role="dialog" aria-labelledby="DetalheDoPet" aria-hidden="true">
+                                <div class="modal-dialog modal-xs" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title text-center">Ficha do Pet</h1>
+                                        </div>
+                                        <div class="modal-body">
+                                            <center>
+                                                @if (!string.IsNullOrEmpty(item.PhotoAddress))
+                                                {
+                                                <img class="img-opacity img-responsive img-detalhe" src="@Url.Content(item.PhotoAddress)">
+                                                }
+
+                                            </center>
+                                            <br>
+                                            <p>
+                                                <span class="textLabel">Nome:</span>
+                                                <span class="textDetail">@Html.DisplayFor(modelItem => item.Name)</span>
+                                            </p>
+                                            <p>
+                                                <span class="textLabel">Raça:</span>
+                                                <span class="textDetail">@Html.DisplayFor(modelItem => item.Breed)</span>
+                                            </p>
+                                            <p>
+                                                <span class="textLabel">Sexo:</span>
+                                                <span class="textDetail">@Html.DisplayFor(modelItem => item.GenderName)</span>
+                                            </p>
+                                            <p>
+                                                <span class="textLabel">Idade:</span>
+                                                <span class="textDetail">@Html.DisplayFor(modelItem => item.Age) anos</span>
+                                            </p>
+                                            <p>
+                                                <span class="textLabel">Tipo:</span>
+                                                <span class="textDetail">@Html.DisplayFor(modelItem => item.TypeName)</span>
+                                            </p>
+                                            <p>
+                                                <span class="textLabel">Cuidados Especiais:</span>
+                                                <span class="textDetail">@Html.DisplayFor(modelItem => item.Cautions)</span>
+                                            </p>
+                                            <p>
+                                                <span class="textLabel">Porte:</span>
+                                                <span class="textDetail">@Html.DisplayFor(modelItem => item.SizeName)</span>
+                                            </p>
+                                            <p>
+                                                <span class="textLabel">Descrição:</span>
+                                                <span class="textDetail">
+                                                    @Html.DisplayFor(modelItem => item.History)
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class=" btn-fechar" data-dismiss="modal"><b><h4>Fechar</h4></b></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM MODAL -->
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+    
+    }
+
+        </div>
+ 
+</section>
+
+<!-- SEÇÃO AVISO -->
+<section class="secaoAviso">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <h1 class="animated Zoom"><b>Gostou de algum?</b></h1>
+                <br>
+                <h4 class="animated Zoom">Entre em contato com a ONG XXXXXXX pelo número (XX)XXXXX-XXXX e veja como adotá-lo.</h4>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="corNav container-fluid item-sidebar ">
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <h4>
+                Maltratar animais é crime ligue e denuncie
+            </h4>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <h5 class="">
+                © Copyright 2019. Feito com <span class="glyphicon glyphicon-heart"></span> By Katarina Mariano
+            </h5>
+        </div>
+    </div>
+</footer>
+<script src="~/Scripts/scriptHome.js"></script>

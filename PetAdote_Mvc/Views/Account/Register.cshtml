@@ -1,0 +1,113 @@
+﻿@model PetAdote_Mvc.Models.AccountViewModels.RegisterViewModel
+
+@{
+    ViewBag.Title = "CADASTRO | Projeto PetAdote";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title>CADASTRO | Projeto PetAdote</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" media="screen" href="~/Content/css/cadastro.css" />
+<script src="@Url.Content("~/Scripts/jquery-3.3.1.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.mask.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.complexify.min.js")"></script>
+<script src="@Url.Content("~/Scripts/bootstrap-validator-0.4.5.min.js")"></script>
+<script src="@Url.Content("~/Scripts/validPhone.js")"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <!-- SESSAO CADASTRO  -->
+    <section class="container-fluid bannerInicial">
+        <div class="divCadastro">
+            <div class="row "><br><br><br><br><br></div>
+            <div class="row">
+                <form class="form">
+                    <div class="col-lg-4 col-sm-3 col-md-3 col-xs-1"></div>
+                    <div id="formularioDeCadastro" class="col-lg-4 col-sm-6 col-md-6 col-xs-10 container">
+                        <div class="row">
+                            <center>
+                                <h2 class="">CADASTRE-SE</h2>
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger alert alert-danger" })
+                            </center>
+                            <!-- <br><br> -->
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <div class="avisoObrigatorio">Os campos com asterisco (*) são obrigatórios</div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <label for="Nome">Nome:*</label>
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @required = "required", maxlength = 50 } })
+                                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <label for="Email">Email:*</label>
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @required = "required", maxlength = 100 } })
+                                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <label for="Ong">ONG:*</label>
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.ONG, new { htmlAttributes = new { @class = "form-control", @required = "required", maxlength = 100 } })
+                                    @Html.ValidationMessageFor(model => model.ONG, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <label for="Telefone">Telefone:</label>
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.Telephone, new { htmlAttributes = new { @class = "form-control phone-ddd-mask", @required = "required", maxlength = 14 } })
+                                    @Html.ValidationMessageFor(model => model.Telephone, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <label for="Senha">Senha:*</label>
+                                <div class="form-group">
+                                    @Html.PasswordFor(model => model.Password, new { @class = "form-control", @required = "required", maxlength = 100 })
+                                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <label for="ConfirmaSenha">Confirma Senha:*</label>
+                                <div class="form-group">
+                                    @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control", @required = "required", maxlength = 100 })
+                                    @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="form-group">
+                            <div class="row center">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                    <button type="submit" class="btn btn-primary btn-block">CADASTRAR</button>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 col-sm-3 col-md-3 col-xs-1"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+}
+
+
+

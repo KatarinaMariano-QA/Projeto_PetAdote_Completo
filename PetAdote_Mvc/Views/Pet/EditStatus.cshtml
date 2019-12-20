@@ -1,0 +1,82 @@
+﻿@model PetAdote_Mvc.Models.PetViewModels.EditStatusViewModel
+
+@{
+    ViewBag.Title = "ALTERAR STATUS DO PET | Projeto PetAdote";
+    Layout = "~/Views/Shared/_NavUser.cshtml";
+}
+<title>ALTERAR STATUS DO PET | Projeto PetAdote</title>
+<link rel="stylesheet" type="text/css" href="~/Content/css/alterarStatus.css" />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <!-- SESSAO ALTERAR STATUS DO PET -->
+<section id="formularioEditarStatusPet" class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12"><br><br><br><br></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="col-lg-2 col-md-3 col-sm-3"></div>
+            <center>
+                <span class="titulo">Alterar Status do Pet:</span>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            </center>
+        </div>
+    </div>
+ 
+
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3 "></div>
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-8">
+            <br><br>
+            <p>
+                <span class="textLabel">Se ele foi adotado e ganhou um lar cheio de amor, escolha: </span><br>
+                <div class="form-radio">
+                    @Html.RadioButtonFor(model => model.status, "Adopted")
+                    <label class=" textDetail">
+                        Adotado
+                    </label>
+                </div>
+            </p>
+            <p>
+                <span class="textLabel">Se ele virou uma estrelinha, escolha: </span><br>
+                <div class="form-radio">
+                    @Html.RadioButtonFor(model => model.status, "Deceased")
+                    <label class=" textDetail">
+                        Falecido
+                    </label>
+                </div>
+            </p>
+
+            <p>
+                <span class="textLabel">Se você quer inserí-lo na lista de adoção, escolha:</span><br>
+                <div class="form-radio">
+                    @Html.RadioButtonFor(model => model.status, "Adoption")
+                    <label class=" textDetail">
+                        Para adoção
+                    </label>
+                </div>
+            </p>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <br><br>
+            <img class="tamanhoImgs" src="@Url.Content(Model.PhotoAddress)" alt="Image" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12"><br><br></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-12">
+            <div class="col-lg-2 col-md-3 col-sm-3"></div>
+            <center>
+                <input type="submit" class="btn btn-success btnSalvar" value="Salvar" />
+                <input type="button" class="btn btn-danger btnCancel" value="Cancelar" onclick="location.href='@Url.Action("ListMyPet", "Pet")'" />
+            </center>
+        </div>
+    </div>
+
+
+</section>
+}

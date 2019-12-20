@@ -1,0 +1,96 @@
+
+.container {
+    position: absolute;
+    width: 100%;
+}
+/* --------- CSS MENU --------- */
+
+.corNav {
+    background-color: #00468c !important;
+    border: none;
+}
+
+.item-sidebar {
+    color: white !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.nav-item-sidebar {
+    color: white !important;
+    font-size: 25px;
+    position: absolute;
+    margin-top: 12px;
+    padding-left: 8px;
+}
+
+.hoverLink {
+    color: white !important;
+}
+
+    .hoverLink:hover {
+        color: white !important;
+        background-color: #df6c15 !important;
+        margin-bottom: 0px;
+    }
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #df6c15 !important
+}
+
+.iconNav {
+    margin-left: 4px;
+}
+
+/* --------- CSS MENSAGEM --------- */
+
+.listaVazia {
+    position: absolute;
+    margin-top: 10%;
+}
+
+.aviso {
+    background-color: rgb(252, 188, 188);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.texto {
+    color: rgb(228, 11, 11) !important;
+}
+/* xs*/
+@media (max-width: 575.98px) {
+    .titulo {
+        font-size: 27px;
+    }
+
+    .listaVazia {
+        position: absolute;
+        margin-top: 20%;
+    }
+}
+
+/* sm*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .listaVazia {
+        position: absolute;
+        margin-top: 15%;
+    }
+}
+
+/* md*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .listaVazia {
+        position: absolute;
+        margin-top: 13%;
+    }
+}
+
+/* lg*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .listaVazia {
+        position: absolute;
+        margin-top: 10%;
+    }
+}

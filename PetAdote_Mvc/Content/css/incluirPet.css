@@ -1,0 +1,54 @@
+.titulo{
+    font-size: 28px;
+}
+.titulo2{
+    font-size: 20px;
+}
+.container{
+    position: absolute;
+    width: 100%;
+}
+.avisoObrigatorio{
+    font-size: 12px; 
+    color:rgb(66, 66, 66);
+}
+label { 
+    display:block; 
+}
+input{ 
+    display:block; 
+}
+.inputHistory {
+    margin: 0px !important;
+    width: 403px !important;
+    height: 123px !important;
+}
+.btnSubmit{
+    border-color: green;
+    font-weight: bold;
+    margin-right: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.btnCancel{
+    border-color: red;
+    font-weight: bold;  
+    margin-left: 10px; 
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.btnSalvar{
+    border-color: green;
+    font-weight: bold;
+    margin-right: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+label{
+    
+    float: left;
+   
+}

@@ -1,0 +1,123 @@
+.titulo {
+    font-size: 28px;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+}
+
+.lista {
+    position: absolute;
+    margin-top: 10%;
+}
+
+.tamanhoImgs {
+    width: 700px !important;
+    height: 200px !important;
+}
+
+.thumbnail{
+    width: auto !important;
+    max-width: 500% !important;
+    border: 2px dashed #00468c !important;
+}
+.botao{
+    background-color: white;
+    border: none;
+    padding: 2px 3px;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+.btnEdit{
+    color: rgb(44, 44, 230);
+}
+.btnStatus{
+    color: green;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: darkgray;
+        color: black;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+/* xs*/
+@media (max-width: 575.98px) {
+    .titulo{
+        font-size: 27px;
+    }
+    .lista{
+        position: absolute;
+        margin-top: 20%;
+    }
+    
+}
+
+/* sm*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .lista{
+        position: absolute;
+        margin-top: 15%;
+    }
+    .tamanhoImgs{
+        width: 400px !important;
+        height:200px !important;
+    }
+    .thumbnail{
+        width: auto !important;
+        max-width: 100% !important;
+    }
+}
+
+/* md*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+   
+    .lista{
+        position: absolute;
+        margin-top: 13%;
+    }
+    .tamanhoImgs{
+        width: 500px !important;
+        height:200px !important;
+    }
+    .thumbnail{
+        width: auto !important;
+        max-width: 500% !important;
+    }
+    
+}
+
+/* lg*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .lista{
+        position: absolute;
+        margin-top: 10%;
+    }
+    .tamanhoImgs{
+        width: 500px !important;
+        height:180px !important;
+    }
+    .thumbnail{
+        width: auto !important;
+        max-width: 90% !important;
+    }
+    
+}
+

@@ -1,0 +1,95 @@
+﻿@model PetAdote_Dominio.Entities.Pet
+
+@{
+    ViewBag.Title = "DetailsPet";
+    Layout = "~/Views/Shared/_NavUser.cshtml";
+}
+
+<title>FICHA DO PET  | Projeto PetAdote</title>
+<link rel="stylesheet" type="text/css" href="~/Content/css/detalhesPet.css" />
+
+
+<!-- SESSAO FICHA DO PET -->
+<section id="fichaDoPet" class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12"><br><br><br><br></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="col-lg-2 col-md-3 col-sm-3"></div>
+            <center>
+                <span class="titulo">Ficha do Pet:</span>
+            </center>
+        </div>
+        <div class="col-sm-12"></div>
+    </div>
+   
+
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3 "></div>
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-8">
+            <br><br>
+            <p>
+                <span class="textLabel">Nome: </span>
+                <span class="textDetail">@Html.DisplayFor(model => model.Name)</span>
+            </p>
+            <p>
+                <span class="textLabel">Tipo: </span>
+                <span class="textDetail">@Html.DisplayFor(model => model.TypeName)</span>
+            </p>
+
+            <p>
+                <span class="textLabel">Sexo: </span>
+                <span class="textDetail">@Html.DisplayFor(model => model.GenderName)</span>
+            </p>
+
+            <p>
+                <span class="textLabel">Tamanho: </span>
+                <span class="textDetail">@Html.DisplayFor(model => model.SizeName)</span>
+            </p>
+
+            <p>
+                <span class="textLabel">Idade: </span>
+                <span class="textDetail">@Html.DisplayFor(model => model.Age) anos</span>
+            </p>
+
+            <p>
+                <span class="textLabel">Raça: </span>
+                <span class="textDetail">@Html.DisplayFor(model => model.Breed)</span>
+            </p>
+
+            <p>
+                <span class="textLabel">Cuidados Especiais: </span>
+                <span class="textDetail">@Html.DisplayFor(model => model.Cautions)</span>
+            </p>
+
+            <p>
+                <span class="textLabel">ONG Responsável: </span>
+                <span class="textDetail">Protetor Independente</span>
+            </p>
+
+            <p>
+                <span class="textLabel">História: </span>
+                <span class="textDetail">@Html.DisplayFor(model => model.History)</span>
+            </p>
+            <br>
+            
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <br><br>
+                <img class="tamanhoImgs" src="@Url.Content(Model.PhotoAddress)" alt="Image" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-3"></div>
+        <div class="col-lg-10 col-md-9 col-sm-9 textFinal">
+            <center>
+                <br>
+                <p>Ficou interessado? Entre em contado com a Ong ou protetor responsável</p>
+                <p>e solicite uma visita e entrevista.</p>
+            </center>
+        </div>
+    </div>
+</section>

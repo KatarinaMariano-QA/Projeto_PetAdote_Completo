@@ -1,0 +1,26 @@
+.titulo{
+    font-size: 28px;
+}
+.container{
+    position: absolute;
+    width: 100%;
+}
+.avisoObrigatorio{
+    font-size: 12px; 
+    color:rgb(66, 66, 66);
+}
+label { 
+    display:block; 
+}
+input{ 
+    display:block; 
+}
+.btnSubmit{
+    border-color: green;
+    font-weight: bold;
+}
+.btnCancel{
+    border-color: red;
+    font-weight: bold;
+    
+}

@@ -1,0 +1,104 @@
+.titulo {
+    font-size: 28px;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+}
+
+.lista {
+    position: absolute;
+    margin-top: 10%;
+}
+
+.tamanhoImgs {
+    width: 700px !important;
+    height: 200px !important;
+}
+
+.thumbnail {
+    width: auto !important;
+    max-width: 500% !important;
+    border: 2px dashed #00468c;
+}
+
+.btn-findOrange {
+    background-color: #ee7920;
+    color: white;
+    border: 2px solid #00468c;
+    border-radius: 25px;
+}
+
+    .btn-findOrange:hover {
+        background-color: #df6c15;
+        color: white;
+        border: 2px solid #05396d;
+        border-radius: 25px;
+    }
+/* xs*/
+@media (max-width: 575.98px) {
+    .titulo {
+        font-size: 27px;
+    }
+
+    .lista {
+        position: absolute;
+        margin-top: 20%;
+    }
+}
+
+/* sm*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .lista {
+        position: absolute;
+        margin-top: 15%;
+    }
+
+    .tamanhoImgs {
+        width: 400px !important;
+        height: 200px !important;
+    }
+
+    .thumbnail {
+        width: auto !important;
+        max-width: 100% !important;
+    }
+}
+
+/* md*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .lista {
+        position: absolute;
+        margin-top: 13%;
+    }
+
+    .tamanhoImgs {
+        width: 500px !important;
+        height: 200px !important;
+    }
+
+    .thumbnail {
+        width: auto !important;
+        max-width: 500% !important;
+    }
+}
+
+/* lg*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .lista {
+        position: absolute;
+        margin-top: 10%;
+    }
+
+    .tamanhoImgs {
+        width: 500px !important;
+        height: 180px !important;
+    }
+
+    .thumbnail {
+        width: auto !important;
+        max-width: 90% !important;
+    }
+}

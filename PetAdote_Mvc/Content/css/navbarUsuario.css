@@ -1,0 +1,98 @@
+.corNav {
+    background-color: #07374f !important;
+}
+
+.item-sidebar {
+    color: white !important;
+}
+
+.container {
+    width: 100%;
+}
+
+.preenchimento {
+    padding-left: 0% !important;
+}
+
+.navFixa {
+    position: fixed;
+}
+
+.nav-sidebar {
+    height: 100vh;
+}
+.iconNav {
+    margin-left: 4px;
+}
+.nav-item-sidebar {
+    color: white !important;
+    font-size: 20px !important;
+    position: absolute;
+    margin-top: 12px;
+    padding-left: 8px;
+}
+.nomeUsuario {
+    position: relative;
+    ;
+    padding-top: 32%;
+    font-size: 20px;
+    color: #ee7920 !important;
+}
+
+.itemMenuInicio {
+    position: relative;
+    margin-top: 10%;
+    font-size: 18px;
+}
+
+.nav li a:hover {
+    color: white !important;
+    background-color: #ee7920 !important;
+    text-align: center;
+}
+
+.colorMenu {
+    color: white !important;
+    background-color: #ee7920 !important;
+    text-align: center;
+    border: #00468c 1px solid;
+}
+
+.itemMenu {
+    font-size: 18px;
+}
+
+.itemMenu2 {
+    font-size: 15px;
+}
+
+h4 {
+    color: black !important;
+}
+/* xs*/
+@media (max-width: 575.98px) {
+}
+
+/* sm*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* md*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .nomeUsuario {
+        position: relative;
+        padding-top: 35%;
+    }
+
+    .itemMenuInicio, .itemMenu {
+        font-size: 16px;
+    }
+}
+
+/* lg*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .nomeUsuario {
+        position: relative;
+        padding-top: 30%;
+    }
+}

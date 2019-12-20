@@ -1,0 +1,156 @@
+.container{
+    width: 100%;
+    padding: 0%;
+}
+
+
+
+/* --------- SEÇÃO PRINCIPAL --------- */
+
+.bannerInicial{
+    background: url('/Images/pegadas.jpeg') no-repeat center center fixed;
+    background-position: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: center;
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    position: relative;
+    top: 50px;
+}
+.tituloPage{
+  color: white;
+}
+
+/* --------- CSS SEÇÃO PASSOS PARA ADOTAR --------- */
+
+.secoesPassosParaAdotar{
+  background-color: #07374f;
+  color: white;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+/* --------- CSS SEÇÃO PORQUE ADOTAR --------- */
+
+.secaoPorqueAdotar{
+  background-color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+   
+}
+.tituloSecaoPorqueAdotar{
+  color: black;
+}
+.textoSecaoPorqueAdotar{
+  color: black;
+}
+.imageDiv{
+  position: absolute;
+  margin-top: 17%;
+}
+
+/* --------- CSS SEÇÃO SOBRE NÓS --------- */
+
+.secaoQuemSomos{
+  background-color: #ee7920;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+ }
+
+.logoPetAdote {
+    width: 230px;
+    margin-left: 2px;
+}
+ /* --------- CSS MISSAO, VISÃO E VALORES --------- */
+
+.secaoValores{
+  background-color: rgba(224,224,224,0.5);
+  color:black;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}  
+.icons{
+  color:#ee7920;
+  font-size: 8rem !important;
+}
+
+/* --------- CSS SEÇÃO FINAL --------- */
+
+.secaoFinal{
+  background-color: #07374f;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+/* --------- CSS FOOTER --------- */
+
+footer{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+/* --------- CSS BOTÕES --------- */ 
+
+.btn-findBlue{
+  background-color: #00468c;
+  color: white;
+  border: 2px solid;
+  border-radius: 25px;
+}
+.btn-findBlue:hover{
+  background-color: #05396d;
+  color: white;
+  border: 2px solid;
+  border-radius: 25px;
+}
+.btn-findOrange{
+  background-color: #ee7920;
+  color: white;
+  border: 2px solid;
+  border-radius: 25px;
+}
+.btn-findOrange:hover{
+  background-color: #df6c15;
+  color: white;
+  border: 2px solid;
+  border-radius: 25px;
+}
+  
+  
+/* --------- CSS IMAGENS --------- */ 
+  
+.img-rounded{
+  opacity:0.9;
+  border-radius: 5px;
+}
+.img-rounded:hover{
+  opacity: 1;
+}
+.hoverzoom {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.hoverzoom img{
+  width: 100%; 
+  -webkit-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+  -moz-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+  -ms-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+  -o-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+  transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+}
+.hoverzoom:hover img{
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+
+ 
